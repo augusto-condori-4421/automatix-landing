@@ -30,8 +30,8 @@ export function ContactSection() {
       <div className="absolute inset-0 diagonal-lines" />
       
       {/* Glow effects */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
@@ -105,7 +105,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10"
+            className="flex flex-col items-center justify-center gap-4 w-full"
           >
             {contactInfo.map((info, index) => (
               <a
@@ -115,8 +115,8 @@ export function ContactSection() {
                 rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
-                <info.icon className="w-5 h-5 text-primary" />
-                <span className="text-sm">{info.label}</span>
+                <info.icon className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-sm break-all">{info.label}</span>
               </a>
             ))}
           </motion.div>

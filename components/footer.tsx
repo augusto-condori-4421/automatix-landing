@@ -117,10 +117,10 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:automatix.empresa@gmail.com"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="flex items-start gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  <Mail className="w-4 h-4" />
-                  automatix.empresa@gmail.com
+                  <Mail className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                  <span className="break-all">automatix.empresa@gmail.com</span>
                 </a>
               </li>
             </ul>

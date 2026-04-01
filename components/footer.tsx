@@ -134,7 +134,7 @@ export function Footer() {
               © {new Date().getFullYear()} AUTOMATIX Studio. Todos los derechos reservados.
             </p>
             <p className="text-muted-foreground text-sm">
-              Tucumán, Argentina
+              Argentina
             </p>
           </div>
         </div>

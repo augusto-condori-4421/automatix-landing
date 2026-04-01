@@ -1,95 +1,125 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react"
+"use client"
+
+import Link from "next/link"
+import Image from "next/image"
+import { Instagram, Mail, Phone } from "lucide-react"
+
+const socialLinks = [
+  {
+    icon: Instagram,
+    href: "https://instagram.com/AUTOMAT1X",
+    label: "Instagram",
+  },
+  {
+    icon: Mail,
+    href: "mailto:automatix.empresa@gmail.com",
+    label: "Email",
+  },
+  {
+    icon: Phone,
+    href: "tel:+543815714332",
+    label: "Teléfono",
+  },
+]
+
+const navLinks = [
+  { href: "#inicio", label: "Inicio" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#portfolio", label: "Portfolio" },
+  { href: "#nosotros", label: "Nosotros" },
+  { href: "#contacto", label: "Contacto" },
+]
 
 export function Footer() {
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
-    <footer className="bg-black border-t border-red-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-secondary border-t border-border">
+      <div className="container mx-auto px-4 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
-          <div className="col-span-1 md:col-span-2">
-            <h2 className="font-orbitron text-2xl font-bold text-white mb-4">
-              Neural<span className="text-red-500">Link</span>
-            </h2>
-            <p className="font-space-mono text-gray-300 mb-6 max-w-md">
-              Pioneering the future of human-computer interaction through advanced brain-computer interface technology.
+          <div>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/automatix-logo.png"
+                alt="AUTOMATIX"
+                width={140}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </Link>
+            <p className="text-muted-foreground text-sm mb-6 max-w-xs">
+              Creamos páginas web y soluciones simples para que tu negocio reciba más consultas.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
-                <Github size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
-                <Mail size={20} />
-              </a>
+            <div className="flex gap-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target={social.href.startsWith("http") ? "_blank" : undefined}
+                  rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="w-10 h-10 rounded-lg bg-background/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Product */}
+          {/* Navigation */}
           <div>
-            <h3 className="font-orbitron text-white font-semibold mb-4">Product</h3>
+            <h3 className="text-foreground font-semibold mb-4">Navegación</h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#technology"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  Technology
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#applications"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  Applications
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#safety"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  Safety & Research
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200"
-                >
-                  FAQ
-                </a>
-              </li>
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <button
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Contact */}
           <div>
-            <h3 className="font-orbitron text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
+            <h3 className="text-foreground font-semibold mb-4">Contacto</h3>
+            <ul className="space-y-3">
               <li>
-                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  About Us
+                <a
+                  href="tel:+543815714332"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
+                  <Phone className="w-4 h-4" />
+                  3815714332
                 </a>
               </li>
               <li>
-                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  Careers
+                <a
+                  href="https://instagram.com/AUTOMAT1X"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
+                  <Instagram className="w-4 h-4" />
+                  @AUTOMAT1X
                 </a>
               </li>
               <li>
-                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  Press
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-space-mono text-gray-400 hover:text-red-500 transition-colors duration-200">
-                  Contact
+                <a
+                  href="mailto:automatix.empresa@gmail.com"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
+                  <Mail className="w-4 h-4" />
+                  automatix.empresa@gmail.com
                 </a>
               </li>
             </ul>
@@ -97,29 +127,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-red-500/20">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-space-mono text-gray-400 text-sm">© 2024 NeuralLink. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a
-                href="/privacy"
-                className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms"
-                className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="/cookies"
-                className="font-space-mono text-gray-400 hover:text-red-500 text-sm transition-colors duration-200"
-              >
-                Cookie Policy
-              </a>
-            </div>
+        <div className="mt-12 pt-8 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-muted-foreground text-sm">
+              © {new Date().getFullYear()} AUTOMATIX Studio. Todos los derechos reservados.
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Tucumán, Argentina
+            </p>
           </div>
         </div>
       </div>

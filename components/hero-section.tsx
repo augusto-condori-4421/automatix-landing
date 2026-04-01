@@ -100,16 +100,27 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative w-full"
+            className="relative w-full flex justify-center lg:justify-end"
           >
-            <div className="relative aspect-square lg:aspect-[4/3] w-full max-w-lg mx-auto lg:max-w-none">
-              <Image
-                src="/hero-web-design.png"
-                alt="Diseño web responsive - laptop y móvil"
-                fill
-                className="object-contain"
-                priority
+            <div className="relative aspect-square w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[420px] mx-auto lg:mx-0 p-2">
+              {/* Spinning border effect */}
+              <div 
+                className="absolute inset-0 rounded-full animate-[spin_4s_linear_infinite]"
+                style={{
+                  background: 'conic-gradient(from 0deg, transparent 0%, transparent 50%, rgba(6, 182, 212, 0.8) 100%)',
+                }}
               />
+              <div className="absolute inset-1 rounded-full bg-background" />
+
+              <div className="relative w-full h-full rounded-full overflow-hidden border border-cyan-500/20 bg-muted/10">
+                <Image
+                  src="/hero-web-design.png"
+                  alt="Diseño web responsive - laptop y móvil"
+                  fill
+                  className="object-cover scale-[1.05]"
+                  priority
+                />
+              </div>
             </div>
           </motion.div>
         </div>

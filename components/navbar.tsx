@@ -52,7 +52,7 @@ export function Navbar() {
               alt="AUTOMATIX"
               width={140}
               height={40}
-              className="h-8 lg:h-10 w-auto"
+              className="h-8 lg:h-10 w-auto rounded-2xl"
             />
           </Link>
 

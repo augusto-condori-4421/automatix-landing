@@ -9,8 +9,8 @@ export function PortfolioSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-cyan-950/10 to-background" />
       
       {/* Diagonal accent */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 transform -skew-y-3" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

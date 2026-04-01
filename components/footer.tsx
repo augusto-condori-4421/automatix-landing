@@ -51,7 +51,7 @@ export function Footer() {
                 alt="AUTOMATIX"
                 width={140}
                 height={40}
-                className="h-10 w-auto"
+                className="h-10 w-auto rounded-2xl"
               />
             </Link>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">

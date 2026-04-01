@@ -68,7 +68,9 @@ export function HeroSection() {
               transition={{ delay: 0.4 }}
               className="text-lg text-muted-foreground mb-8"
             >
-              para celular, tablets y computadoras
+              ¿Perdés clientes por responder tarde?
+              <br />
+              Creamos páginas web y chatbots para que tu negocio reciba más consultas.
             </motion.p>
 
             <motion.div
@@ -130,7 +132,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 top-178 sm:top-130"
         >
           <span className="text-sm text-muted-foreground">deslizá</span>
           <motion.div

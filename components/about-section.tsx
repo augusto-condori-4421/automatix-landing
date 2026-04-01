@@ -16,7 +16,7 @@ export function AboutSection() {
   return (
     <section id="nosotros" className="py-24 relative">
       <div className="absolute inset-0 diagonal-lines opacity-30" />
-      
+
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
@@ -34,7 +34,7 @@ export function AboutSection() {
               <span className="gradient-text">AUTOMATIX</span>
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Somos un equipo apasionado por la tecnología y el diseño. Nos especializamos en crear 
+              Somos un equipo apasionado por la tecnología y el diseño. Nos especializamos en crear
               soluciones digitales que ayudan a pequeños y medianos negocios a crecer en el mundo digital.
               Desde páginas web hasta sistemas de gestión, trabajamos para que tu negocio reciba más consultas.
             </p>
@@ -65,10 +65,10 @@ export function AboutSection() {
             className="grid grid-cols-2 gap-6"
           >
             {[
-              { number: "50+", label: "Proyectos Completados" },
+              { number: "100%", label: "Proyectos Completados" },
               { number: "100%", label: "Clientes Satisfechos" },
               { number: "24/7", label: "Soporte Disponible" },
-              { number: "3+", label: "Años de Experiencia" },
+              { number: "2+", label: "Años de Capacitacion y Experiencia" },
             ].map((stat, index) => (
               <motion.div
                 key={index}

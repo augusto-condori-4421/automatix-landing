@@ -24,7 +24,7 @@ export function HeroSection() {
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden diagonal-lines">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-cyan-950/20" />
-      
+
       {/* Diagonal accent lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan-500/5 to-transparent" />
@@ -49,7 +49,7 @@ export function HeroSection() {
             >
               AUTOMATIX STUDIO
             </motion.p>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -61,14 +61,14 @@ export function HeroSection() {
               <span className="text-foreground">Páginas </span>
               <span className="gradient-text">WEB</span>
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="text-lg text-muted-foreground mb-8"
             >
-              para celular y PC
+              para celular, tablets y computadoras
             </motion.p>
 
             <motion.div

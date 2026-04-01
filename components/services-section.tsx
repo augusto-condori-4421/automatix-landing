@@ -17,13 +17,13 @@ const services = [
   },
   {
     icon: Calendar,
-    title: "Sistema de Turnos",
-    description: "Gestión de citas y reservas para tu negocio de forma simple y eficiente.",
+    title: "Chat Bots",
+    description: "Gestión de mensajes, informacion, citas, mejora de atencion a los clientes.",
   },
   {
     icon: Settings,
     title: "Sistemas a Medida",
-    description: "Soluciones personalizadas para gimnasios, comercios y pequeños negocios.",
+    description: "Soluciones personalizadas para gimnasios, sistemas de turnos, comercios y pequeños negocios.",
   },
   {
     icon: Zap,
@@ -60,7 +60,7 @@ export function ServicesSection() {
   return (
     <section id="servicios" className="py-24 relative">
       <div className="absolute inset-0 diagonal-lines opacity-50" />
-      
+
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

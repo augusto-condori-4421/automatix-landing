@@ -1,87 +1,59 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: oklch(0.98 0.01 220);
-  --foreground: oklch(0.15 0.02 240);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 240);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 240);
-  --primary: oklch(0.65 0.18 220);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.12 0.03 240);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.95 0.01 220);
-  --muted-foreground: oklch(0.45 0.02 240);
-  --accent: oklch(0.65 0.18 220);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.90 0.01 220);
-  --input: oklch(1 0 0);
-  --ring: oklch(0.65 0.18 220 / 0.5);
-  --radius: 0.625rem;
+  --background: 0 0% 98%;
+  --foreground: 240 10% 3%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 10% 12%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 220 13% 91%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 186 100% 42%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 13% 91%;
+  --input: 0 0% 100%;
+  --ring: 217 91% 60%;
+  --radius: 0.5rem;
 }
 
 .dark {
-  --background: oklch(0.12 0.025 240);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.15 0.03 240);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.15 0.03 240);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.70 0.16 220);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.20 0.03 240);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.20 0.03 240);
-  --muted-foreground: oklch(0.65 0.02 220);
-  --accent: oklch(0.70 0.16 220);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0.03 240);
-  --input: oklch(0.18 0.03 240);
-  --ring: oklch(0.70 0.16 220 / 0.5);
-}
-
-@theme inline {
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --background: 240 10% 7%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 15%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 15%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 13% 20%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 13% 20%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 186 100% 42%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 10% 25%;
+  --input: 240 10% 18%;
+  --ring: 217 91% 60%;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter);
   }
 }
 
@@ -94,9 +66,7 @@
   }
   
   .glass-card {
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(59, 130, 246, 0.15);
+    @apply bg-slate-900/60 backdrop-blur-md border border-blue-500/15;
   }
   
   .gradient-text {

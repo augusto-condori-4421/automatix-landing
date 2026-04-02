@@ -132,7 +132,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-100 top-178 sm:top-130"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-9999 top-174 sm:top-130"
         >
           <span className="text-sm text-muted-foreground">deslizá</span>
           <motion.div

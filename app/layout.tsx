@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "AUTOMATIX Studio - Diseño Web y Soluciones Digitales",
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${jetbrainsMono.variable} antialiased dark`}>
       <body className="font-sans">
+        <GoogleTagManager gtmId="GTM-PZTQWJGT" />
         <Navbar />
         <main>{children}</main>
         <Footer />

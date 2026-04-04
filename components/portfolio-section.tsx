@@ -21,9 +21,9 @@ export function PortfolioSection() {
   }, [emblaApi])
 
   const images = [
-    "/carousel-1.png",
-    "/carousel-2.png",
-    "/carousel-3.png",
+    "/carousel-1.webp",
+    "/carousel-2.webp",
+    "/carousel-3.webp",
   ]
 
   return (

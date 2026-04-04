@@ -116,7 +116,7 @@ export function HeroSection() {
 
               <div className="relative w-full h-full rounded-full overflow-hidden border border-cyan-500/20 bg-muted/10">
                 <Image
-                  src="/hero-web-design.png"
+                  src="/hero-web-design.webp"
                   alt="Diseño web responsive - laptop y móvil"
                   fill
                   className="object-cover scale-[1.05]"

@@ -48,7 +48,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/automatix-logo.png"
+              src="/automatix-logo.webp"
               alt="AUTOMATIX"
               width={140}
               height={40}

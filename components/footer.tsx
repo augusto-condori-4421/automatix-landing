@@ -47,7 +47,7 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/automatix-logo.png"
+                src="/automatix-logo.webp"
                 alt="AUTOMATIX"
                 width={140}
                 height={40}

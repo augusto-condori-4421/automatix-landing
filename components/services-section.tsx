@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Globe, Smartphone, Settings, Calendar, Zap, Code } from "lucide-react"
+import { Globe, Smartphone, Settings, Bot, Zap, Code } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const services = [
@@ -16,7 +16,7 @@ const services = [
     description: "Diseños optimizados para celular y PC con la mejor experiencia de usuario.",
   },
   {
-    icon: Calendar,
+    icon: Bot,
     title: "Chat Bots",
     description: "Gestión de mensajes, informacion, citas, mejora de atencion a los clientes.",
   },

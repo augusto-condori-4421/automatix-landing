@@ -9,6 +9,9 @@ import { GoogleTagManager } from '@next/third-parties/google'
 export const metadata: Metadata = {
   title: "AUTOMATIX Studio - Diseño Web y Soluciones Digitales",
   description: "Creamos páginas web y soluciones simples para que tu negocio reciba más consultas. Diseños personalizados, sistemas de turnos y automatizaciones.",
+  verification: {
+    google: "eaOV0OH1wOI2KnwTzy7DfEDq41hw_7zil3bl00pmYC8",
+  },
 }
 
 const inter = Inter({
